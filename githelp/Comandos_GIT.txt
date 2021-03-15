@@ -1,0 +1,62 @@
+Informações importantes GIT
+
+GIT local
+Diretórios
+Cd = navegar por pastas
+Git status = status da pasta/arquivo no git
+Git status -u = status mostrando imagens em pastas
+Ls = listar
+Clear = limpa terminal
+Cls = limpa terminal no vscode
+Git init = iniciar git num diretório
+Rm -rf .git/ = exclui o git do diretório
+
+Configurar Editor
+Git config --local user.name (nome/apelido) = configura nome para git local
+Git config --local user.email (email) = email para git local
+Git config  --local -l = Mostrando informações de configuração link de repositório github
+Git config  --global -l = Mostrando informações de configuração incluindo editor, nome user...
+Git config –-global core.editor “code –wait” = configura editor de commits para vscode
+
+Adicionar e Comitar
+Git add = adicionar arquivo
+Git add . = adiciona todos os arquivos novos/alterados do diretório
+Git commit -m “” = commitar o que foi adicionado para git
+Git commit = Chama um editor para escrever o texto. Ex vscode
+Git commit -am “” = Adiciona arquivo e comita ao mesmo tempo
+Q = Sai de um comando ex: quando mostra uma arvore de commits
+
+Retirar / Desfazer / excluir
+Git restore --staged (nome do arquivo) = Retira um arquivo do status stage
+Git reset (nome do arquivo) = Retira um arquivo do status stage 
+Git reset --soft (hash do commit) = reseta commit sem tirar do stage
+Git reset --mixed (Hash do commit) = reseta commit e retira do stage
+Git checkout --(nome do arquivo) = Desfaz ações que não estão em stage
+Git reset --hard (hash do commit pai) = apaga tudo
+Git revert (hash do commit) = abre terminal para digitar texto revert e apaga tudo
+Git revert (hash do commit) --no-edit  = deixa salvo o texto do commit e apaga tudo
+Git rm (nome do arquivo) = exclui arquivo e deixa as informações em stage para apenas commitar sobre a exclusão
+
+Logs de commits
+Git log = mostra arvore de commits
+Git log -1 = traz o log do ultimo commit! Ex se for -2 traz dos dois últimos
+Git log --oneline = Traz os commits resumindo informações desnecessárias  
+git log --oneline --all --graph = mostra commits graficamente
+Git show e595e41 = o código refere a  resh de um commit que é mostrado em detalhe
+Git log –stat -1 = No ultimo commit quantas linhas saíram ou entraram no código
+Git log –author=nome = Traz commits de determinado autor
+Git log --parents = Traz commits de pai pra filho, pode se resumir com “git log - - parentes - - oneline”
+
+Ignorando arquivos
+Basta criar um arquivo com o nome “.gitignore” e salvar no diretorio do git, salvar os nomes dos arquivos que devem ser ignorados para não serem trackeados/commitados.
+Pode se ignorar todos os arquivos por formato usando por exemplo *.txt 
+
+GIT Diferenças
+Git diff = mostrar diferença entre um arquivo quando salvo a modificação para a versão ainda não salva
+Git diff (nome do arquivo) = mostra diferença de um arquivo especifico
+Git diff --cached = mostra diferenças de arquivos já na stage “traqueado”
+Git diff --staged = mostra diferenças de arquivos já na stage “traqueado”
+Git diff (hash pai)..(hash filho) = Mostra diferença entre commitados
+
+Movendo / Renomeando
+Git mv (nome atual do arquivo ou pasta) (novo nome)

@@ -1,0 +1,36 @@
+COMANDOS GITHUB
+
+GIT REMOTO
+
+Configuração
+git remote add  (apelido do link “origin é o padrão”) (link do diretório no github) = linka git ao github
+git remote rm (apelido do link “origin é o padrão”) = Apaga a conexão com o github
+git remote = mostra se estamos conectado ao github
+git remote -v = mostra a url do github ao qual o git está conectado
+
+Clonagem
+git clone (link do projeto) = clona o projeto do github para contribuição offline
+
+Commits
+Git push  (apelido do link) master = pedindo para colocar os arquivos no github
+git push -u origin (nome do branch) = faz o push e deixa trackeado para enviar sempre para o mesmo
+Git pull (url “origin”) master = pegar todos os commits existentes no github
+
+Branch
+git branch = mostra o branch local(Geralmente é master)
+git branch -r = mostra a branch remota
+git branch -a = mostra todas as branchs
+git branch (nome qualquer para a branch) = adiciona uma nova branch
+git branch (nome do branch) origin/(nome do branch) = Conecta um branch online a um offline 
+git push origin :(nome da branch)= Apaga uma branch online
+git checkout (nome da branch)Sai da branch atual para a nova 
+git checkout -b (nome da branch) = cria uma branch e entra nela automaticamente
+git branch -d (nome da branch) = Deleta uma branch
+
+
+Merge/Rebase
+git merge (nome da branch que quer unir) = Une os commits das branch mantendo historico que ouveram duas branch
+git rebase (nome da brach que quer unir) = une os commits mostrando como se não tivesse existido outra branch
+git rebase --continue
+
+
